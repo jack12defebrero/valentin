@@ -9,7 +9,6 @@ export default function EmojiConfetti({}: EmojiConfettiProps) {
     // Posición horizontal aleatoria (en porcentaje)
     const left = Math.random() * 100;
     // Retardo aleatorio (para darle variación al inicio de la animación)
-    // Para los que rebotan, limitamos el delay para que no queden fuera demasiado tiempo.
     const delay = Math.random() * 2;
     // 70% de probabilidad para que el emoji se quede (rebote) y 30% para efecto infinito
     const isBounce = Math.random() < 0.7;
@@ -29,13 +28,10 @@ export default function EmojiConfetti({}: EmojiConfettiProps) {
         style={
           {
             position: 'absolute',
-            // Se inicia un poco arriba de la pantalla
-            top: '-50px',
-            left: `${left}%`,
+            top: '-50px', // Empezar desde un poco arriba de la pantalla
+            left: `${left}%`, // Posición horizontal aleatoria
             fontSize,
-            // Definimos la rotación mediante una variable CSS
-            '--rotation': `${rotation}deg`,
-            // Para ambos tipos usamos fill-mode both, de modo que incluso durante el delay se aplica el keyframe inicial.
+            '--rotation': `${rotation}deg`, // Rotación aleatoria
             animation: `${animationName} ${animationDuration} ${delay}s ${
               isBounce ? 'ease-out 1 both' : 'linear infinite both'
             }`,
