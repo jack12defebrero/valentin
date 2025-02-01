@@ -74,11 +74,12 @@ export default function ValentineCard({
     };
   }, []);
 
-  const handleNoClick = (e: React.MouseEvent) => {
+  // Manejar el clic en el botón "No", pero solo redirigir si no es móvil
+  const handleNoClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!isMobile) {
-      onNo(); // Solo ejecuta la acción "onNo" si no es móvil
+      onNo(); // Ejecuta la acción "onNo" solo si no es móvil
     }
-    // Si es móvil, no ejecutamos nada, pero mantenemos la interactividad
+    // Si es móvil, no hace nada, pero mantiene la interacción visual
   };
 
   return (
