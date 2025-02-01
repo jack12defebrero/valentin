@@ -1,6 +1,14 @@
+/* En tu globals.css o el archivo de estilos principal */
+@import 'primereact/resources/themes/lara-light-indigo/theme.css'; 
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 :root {
   --background: #ffffff;
