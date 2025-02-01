@@ -3,7 +3,7 @@ import React from 'react';
 // Define la interfaz para las propiedades del botón
 interface ButtonProps {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void; // Aseguramos que el tipo de onClick sea correcto
   onMouseEnter?: () => void;
   style?: React.CSSProperties;
   className?: string;
