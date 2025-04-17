@@ -85,7 +85,7 @@ export default function ValentineCard({
   return (
     <div className="text-center">
       <h1 className="text-4xl md:text-5xl font-bold text-pink-800 animate-pulse">
-        ¿puedes ser mi ochita chi? 💖
+        ¿puedes ser mi ochita chi?  💖
       </h1>
 
       <Tenor />
